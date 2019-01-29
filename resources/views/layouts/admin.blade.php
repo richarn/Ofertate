@@ -27,7 +27,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">OFERTATE</a>
+        <a class="navbar-brand" href="/">OFERTATE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,41 +35,96 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio
+              <a class="nav-link" href="/">Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Nosotros</a>
+              <a class="nav-link" href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <a class="nav-link" href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#servicios">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contactos</a>
+              <a class="nav-link" href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#contactos">Contactos</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="justify-content: center;">
-
-
-        
-         <label for="exampleFormControlSelect1" style="color: white;margin-right: 10px">Buscar Categorias</label><select class="form-control" id="exampleFormControlSelect1" style="width: 400px">
-            <option>Categorias</option>
-            <option>Calzados</option>
-            <option>Remeras</option>
-            <option>Camisas</option>
-            <option>Productos alimenticios</option>
-            <option>Electrodomésticos</option>
-          </select>
-          <button class="btn btn-outline-success my-6 my-sm-0" type="submit">Search</button>
+      @yield('filtro')
     </nav>
 
     <!-- Page Content -->
     <div class="container">
 
+    <!--modalNosotros-->
+      <div class="container">
+        
+        <div class="modal fade" id="nosotros" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is a small modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--endmodalNosotros-->    
+
+    <!--modalServicio-->
+      <div class="container">
+        
+        <div class="modal fade" id="servicios" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is a small modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--endmodalServicio-->          
+
+    <!--modalContacto-->
+      <div class="container">
+        
+        <div class="modal fade" id="contactos" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is a small modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--endmodalContacto--> 
+    
       <!-- Jumbotron Header -->
       <h1 style="color: orange">Destacadas</h1> 
       <header class=" my-4">
@@ -161,38 +216,7 @@
 
       </div>
       <!-- /.row -->
-      <h1 style="color: orange">Noticias</h1>  
-
-      <header class="my-4">
-
-          <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="{{asset('assets/images/anuncio.jpg')}}">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="{{asset('assets/images/garage.jpg')}}">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="{{asset('assets/images/ofer.jpg')}}">
-              </div>              
-            
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-      </header>
+      @yield('noticia')
   </div>
     <!-- /.container -->
 

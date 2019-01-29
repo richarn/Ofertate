@@ -11,13 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('inicio.index');
-});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('inicio', 'InicioController@index');
+Route::get('/', 'InicioController@index');
+
+Route::post('open/calzado', 'InicioController@open_calzado');
+
+Route::get('calzado', 'CalzadosController@index');
+
+Route::get('remera', 'RemerasController@index');
+
+Route::get('producto', 'ProductoController@index');
+
+Route::get('camisa', 'CamisasController@index');
+
+Route::get('electro', 'ElectroController@index');
